@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.ebook_reader.HelloController"
+            stylesheets="@styles.css">
+
+    <top>
+        <VBox spacing="10" styleClass="header-container">
+            <MenuBar styleClass="menu-bar">
+                <Menu text="File" styleClass="menu">
+                    <MenuItem text="Settings"/>
+                    <MenuItem text="Exit"/>
+                </Menu>
+                <Menu text="View" styleClass="menu">
+                    <MenuItem fx:id="recentlyViewedMenuItem" text="Recently Viewed" onAction="#showRecentlyViewed"/>
+                </Menu>
+            </MenuBar>
+
+            <HBox spacing="10" alignment="CENTER_LEFT" styleClass="search-container">
+                <TextField fx:id="searchField" promptText="Search books..." styleClass="search-field"/>
+                <Button text="Search" onAction="#searchBooks" styleClass="search-button"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="20" styleClass="main-container">
+            <!-- Books Table -->
+            <TableView fx:id="booksTable" styleClass="book-table">
+                <columns>
+                    <TableColumn prefWidth="120" fx:id="cover" text="Cover" styleClass="table-column">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="coverImagePath"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="250" text="Title" styleClass="table-column">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="title"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="200" text="Author" styleClass="table-column">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="author"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="100" text="Progress" styleClass="table-column">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="currentPage"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+
+            <HBox spacing="15" alignment="CENTER" styleClass="button-container">
+                <Button text="Open" onAction="#openBook" styleClass="action-button"/>
+                <Button text="Add Book" onAction="#addBook" styleClass="action-button"/>
+                <Button text="Delete" onAction="#deleteBook" styleClass="action-button danger"/>
+                <Button text="Edit" onAction="#editBook" styleClass="action-button"/>
+                <Button fx:id="recentlyViewedButton" text="Recently Viewed" onAction="#showRecentlyViewed" styleClass="action-button"/>
+            </HBox>
+
+            <ProgressBar fx:id="progressBar" styleClass="progress-bar"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox styleClass="status-bar" alignment="CENTER_RIGHT">
+            <Label text="Ready" styleClass="status-text"/>
+        </HBox>
+    </bottom>
+</BorderPane>
