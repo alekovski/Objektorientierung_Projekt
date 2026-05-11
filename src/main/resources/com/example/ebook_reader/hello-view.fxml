@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.ebook_reader.HelloController">
+
+    <!-- HEADER -->
+    <top>
+        <HBox fx:id="windowHeader" styleClass="window-header">
+            <Label text="📚 E‑Book Reader" styleClass="window-title"/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <!-- Dark Mode Toggle -->
+            <Button text="🌙" onAction="#enableDarkMode" styleClass="window-button"/>
+            <Button text="☀️" onAction="#enableLightMode" styleClass="window-button"/>
+
+            <!-- Window Controls -->
+            <Button text="—" onAction="#minimizeWindow" styleClass="window-button"/>
+            <Button text="⬜" onAction="#toggleMaximize" styleClass="window-button"/>
+            <Button text="✕" onAction="#closeWindow" styleClass="window-button window-button-close"/>
+        </HBox>
+    </top>
+
+    <!-- CENTER: SEARCH + TABLE -->
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <HBox spacing="10">
+                <TextField fx:id="searchField" promptText="Search books..."/>
+                <Button text="Search" onAction="#searchBooks" styleClass="modern-button"/>
+            </HBox>
+
+            <TableView fx:id="booksTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="cover" text="Cover" prefWidth="120.0"/>
+                    <TableColumn fx:id="titleColumn" text="Title" prefWidth="300.0"/>
+                    <TableColumn fx:id="authorColumn" text="Author" prefWidth="200.0"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <!-- BOTTOM: ACTION BUTTONS -->
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <Button text="📖 Open" onAction="#openBook" styleClass="modern-button"/>
+            <Button text="➕ Add Book" onAction="#addBook" styleClass="modern-button"/>
+            <Button text="🗑️ Delete" onAction="#deleteBook" styleClass="modern-button modern-button-danger"/>
+            <Button text="✏️ Edit" onAction="#editBook" styleClass="modern-button"/>
+            <Button text="👁️ Recently Viewed" onAction="#showRecentlyViewed" styleClass="modern-button"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

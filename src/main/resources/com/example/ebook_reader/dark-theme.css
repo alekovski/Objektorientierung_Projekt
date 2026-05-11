@@ -1,0 +1,275 @@
+/* ---------------------------------------------------
+   GLOBAL ROOT STYLING (Dark Mode)
+   Base colors, font, and default text color
+--------------------------------------------------- */
+.root {
+    -fx-background-color: #121212;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-text-fill: #e0e0e0;
+}
+
+/* ---------------------------------------------------
+   CUSTOM WINDOW HEADER (Dark Mode)
+   Used for all undecorated windows
+--------------------------------------------------- */
+.window-header {
+    -fx-background-color: #1e1e1e;
+    -fx-padding: 6 10;
+    -fx-alignment: center-left;
+    -fx-spacing: 10;
+}
+
+.window-title {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Header buttons: minimize, maximize, close */
+.window-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-padding: 4 12;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-cursor: hand;
+    -fx-transition: 0.2s;
+}
+
+.window-button:hover {
+    -fx-background-color: #333333;
+}
+
+/* Close button hover state */
+.window-button-close:hover {
+    -fx-background-color: #e81123;
+}
+
+/* ---------------------------------------------------
+   MODERN ACTION BUTTONS (Dark Mode)
+   Used for all main UI actions
+--------------------------------------------------- */
+.modern-button {
+    -fx-background-color: #2e2e2e;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-padding: 8 16;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+    -fx-spacing: 6;
+    -fx-transition: 0.2s;
+}
+
+.modern-button:hover {
+    -fx-background-color: #3a3a3a;
+}
+
+.modern-button:pressed {
+    -fx-background-color: #1f1f1f;
+}
+
+/* Danger button (Delete) */
+.modern-button-danger {
+    -fx-background-color: #b3261e;
+}
+
+.modern-button-danger:hover {
+    -fx-background-color: #d93c32;
+}
+
+.modern-button-danger:pressed {
+    -fx-background-color: #8a1e18;
+}
+
+/* ---------------------------------------------------
+   SEARCH FIELD (Dark Mode)
+--------------------------------------------------- */
+.text-field {
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-padding: 6;
+    -fx-background-color: #1e1e1e;
+    -fx-text-fill: #e0e0e0;
+    -fx-border-color: #333333;
+}
+
+.text-field:focused {
+    -fx-border-color: #848584;
+}
+
+/* ---------------------------------------------------
+   TABLEVIEW (Dark Mode)
+   Used for the main book list
+--------------------------------------------------- */
+.table-view {
+    -fx-background-color: #1e1e1e;
+    -fx-border-color: #333333;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #2a2a2a;
+    -fx-background-radius: 6 6 0 0;
+}
+
+.table-view .column-header {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8;
+    -fx-text-fill: #ffffff;
+}
+
+/* Table rows */
+.table-row-cell {
+    -fx-padding: 8;
+    -fx-text-fill: #ffffff;
+}
+
+/* Ensures text inside cells stays bright */
+.table-row-cell .text {
+    -fx-fill: white;
+}
+
+/* Hover and selection states */
+.table-row-cell:filled:hover {
+    -fx-background-color: #817b7b;
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: #848584;
+    -fx-text-fill: white;
+}
+
+/* ---------------------------------------------------
+   LISTVIEW (Recently Viewed)
+--------------------------------------------------- */
+.list-view {
+    -fx-background-color: #1e1e1e;
+    -fx-control-inner-background: #1e1e1e;
+    -fx-border-color: #333333;
+}
+
+.list-cell {
+    -fx-text-fill: #e0e0e0;
+    -fx-padding: 8;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #009688;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #009688;
+    -fx-text-fill: white;
+}
+
+/* ---------------------------------------------------
+   TEXTAREA (Reader Window)
+--------------------------------------------------- */
+.text-area {
+    -fx-font-size: 15px;
+    -fx-padding: 10;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-text-fill: #e0e0e0;
+}
+
+.text-area .content {
+    -fx-background-color: #1e1e1e;
+    -fx-padding: 10;
+}
+
+/* ---------------------------------------------------
+   SCROLLBARS (Dark Mode)
+--------------------------------------------------- */
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #555555;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #777777;
+}
+
+/* ---------------------------------------------------
+   DIALOG WINDOWS (Add/Edit Book)
+--------------------------------------------------- */
+.dialog-pane {
+    -fx-background-color: #1e1e1e;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: #e0e0e0;
+}
+
+.dialog-pane .button {
+    -fx-background-color: #2e2e2e;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #3a3a3a;
+}
+
+/* ---------------------------------------------------
+   CONTEXT MENU (Dark Mode)
+--------------------------------------------------- */
+.context-menu {
+    -fx-background-color: #2a2a2a;
+    -fx-text-fill: #e0e0e0;
+}
+
+.menu-item {
+    -fx-text-fill: #e0e0e0;
+}
+
+.menu-item:focused {
+    -fx-background-color: #3a3a3a;
+}
+
+/* ---------------------------------------------------
+   READER-SPECIFIC DARK MODE OVERRIDES
+   Ensures consistent dark background in scrollable text
+--------------------------------------------------- */
+.text-area {
+    -fx-text-fill: #e6e6e6;
+    -fx-background-color: #111111;
+}
+
+.text-area .content {
+    -fx-background-color: #111111;
+}
+
+.scroll-pane {
+    -fx-background: #111111;
+    -fx-background-color: #111111;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: #111111;
+}
+
+/* Ensures empty table areas stay dark */
+.table-row-cell,
+.table-view .virtual-flow .clipped-container .sheet {
+    -fx-background-color: #111111;
+}
+
+/* Dialog text fields */
+.dialog-pane .text-field {
+    -fx-background-color: #1e1e1e;
+    -fx-text-fill: #e0e0e0;
+    -fx-border-color: #333333;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-padding: 6;
+}
+
+.dialog-pane .text-field:focused {
+    -fx-border-color: #009688;
+}
