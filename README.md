@@ -1,5 +1,5 @@
 # Object-Oriented Project – JavaFX E‑Book Reader
-This project is a desktop e‑book reader application built with JavaFX. It demonstrates clean Object‑Oriented Programming (OOP) design and practical application structure.
+This project is a desktop e‑book reader application built with JavaFX. It demonstrates clean Object‑Oriented Programming (OOP) design and a structured, maintainable application architecture.
 
 ## Features
  - Library Management.
@@ -16,3 +16,15 @@ This project is a desktop e‑book reader application built with JavaFX. It demo
    Modern undecorated windows with custom headers, Light/Dark Mode, and consistent UI styling.
  - OOP Principles.
    Classes like Book and Library demonstrate encapsulation, state management, and clean separation of concerns.
+
+## Technologies Used
+ - Java  
+ - JavaFX  
+ - Java Serialization  
+ - MVC‑inspired structure
+
+## Project Skills Demonstrated
+ - Designing and implementing OOP‑based applications  
+ - Managing application state and persistence  
+ - Building custom JavaFX UI components  
+ - Structuring maintainable desktop applications  
